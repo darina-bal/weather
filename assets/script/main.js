@@ -20,6 +20,12 @@ function loadDoc(inputText) {
         return;
     }
     const xhttp = new XMLHttpRequest();
+    xhttp.timeout = 10000;
+    xhttp.ontimeout = function() {
+        console.error('Превышен лимит ожидания ответа (тайм‑аут)');
+        modalError('Timeout');
+        document.querySelector('.preview__preloader').style.display = 'none';
+    };
     xhttp.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);

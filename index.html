@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+
+<body>
+    <div class="preview">
+        <div class="container">
+            <nav class="preview__navigation">
+                <img src="./assets/images/logo.svg" alt="logo">
+                <div class="preview__navigation_time">
+                    <span class="preview__navigation_time_hours">00</span> :
+                    <span class="preview__navigation_time_minutes">00</span>
+                </div>
+                <a href="/" class="preview__navigation_logo">WeatherMe</a>
+                <div class="preview__navigation_wrapper">
+                    <a class="preview__navigation_wrapper_option today" href="#">Today</a>
+                    <a class="preview__navigation_wrapper_option tomorrow" href="#">Tomorrow</a>
+                    <a class="preview__navigation_wrapper_option weekly" href="#">Weekly Forecast</a>
+                </div>
+            </nav>
+            <div class="preview__degrees">
+                <span class="preview__degrees_degree">°C</span>
+                <label class="preview__degrees_toggle-switch">
+                    <input type="checkbox">
+                    <span></span>
+                    <div class="gradient1"></div>
+                    <div class="gradient2"></div>
+                </label>
+                <span class="preview__degrees_degree">°F</span>
+            </div>
+            <div class="preview__search">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M43.242 34.755L36.8145 28.395C35.6805 27.27 34.167 26.64 32.5335 26.64C32.0025 26.64 31.473 26.715 30.9735 26.85L28.8885 24.78C30.7035 22.23 31.761 19.11 31.761 15.75C31.761 7.05 24.651 0 15.8805 0C7.11 0 0 7.05 0 15.75C0 24.45 7.11 31.5 15.8805 31.5C19.0725 31.5 22.0515 30.555 24.5325 28.935L26.7105 31.095C26.5605 31.59 26.5005 32.115 26.5005 32.64C26.5005 34.245 27.1185 35.76 28.2705 36.885L34.6815 43.245C35.817 44.37 37.3455 45 38.964 45C40.584 45 42.0945 44.37 43.245 43.245C45.585 40.905 45.585 37.095 43.242 34.755ZM3.027 15.75C3.027 8.715 8.787 3 15.882 3C22.977 3 28.737 8.715 28.737 15.75C28.737 22.785 22.974 28.5 15.882 28.5C8.79 28.5 3.027 22.785 3.027 15.75ZM41.094 41.13C39.915 42.3 37.9935 42.3 36.8145 41.13L30.402 34.755C29.8275 34.2 29.5245 33.45 29.5245 32.64C29.5245 31.83 29.8425 31.08 30.402 30.525C30.9765 29.955 31.7325 29.64 32.535 29.64C33.351 29.64 34.11 29.955 34.683 30.525L41.0955 36.885C42.2745 38.055 42.2745 39.96 41.0955 41.13H41.094Z"
+                        fill="#4E5254" />
+                    <path
+                        d="M16.5 24.75C16.5 25.17 16.17 25.5 15.75 25.5H15.735C10.35 25.485 6 21.135 6 15.75C6 10.365 10.35 6.015 15.735 6H15.75C16.17 6 16.5 6.33 16.5 6.75C16.5 7.17 16.17 7.5 15.75 7.5H15.735C11.19 7.515 7.5 11.205 7.5 15.75C7.5 20.295 11.19 23.985 15.735 24H15.75C16.17 24 16.5 24.33 16.5 24.75Z"
+                        fill="#4E5254" />
+                </svg>
+                <input type="search" placeholder="Search location...">
+            </div>
+            <div class="preview__slider">
+                <div class="preview__slider_windows">
+                </div>
+                <div class="preview__slider_buttons">
+                    <div class="preview__slider_buttons_left-arrow arrow-disabled violet-arrow">
+                        <svg width="26" height="42" viewBox="0 0 26 42" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 37L21 21L5 5" stroke-width="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="preview__slider_buttons_right-arrow violet-arrow">
+                        <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 37L21 21L5 5" stroke-width="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="preview__bottom">
+                <div class="preview__time-icons" slide-index="0">
+                    <div class="preview__time-icons_time">
+                        <span>1:00</span><span>4:00</span><span>7:00</span><span>10:00</span><span>13:00</span><span>16:00</span><span>19:00</span><span>22:00</span>
+                    </div>
+                    <div class="preview__time-icons_icon"><div><img id="icon1" src="./assets/images/clouds.svg"></div><div><img id="icon2" src="./assets/images/clouds.svg"></div><div><img id="icon3" src="./assets/images/clouds.svg"></div><div><img id="icon4" src="./assets/images/clouds.svg"></div><div><img id="icon5" src="./assets/images/clouds.svg"></div><div><img id="icon6" src="./assets/images/clouds.svg"></div><div><img id="icon7" src="./assets/images/clouds.svg"></div><div><img id="icon8" src="./assets/images/clouds.svg"></div>
+                    </div>
+                </div>
+                <div class="preview__widget-temperature" style="width: 1357px;" slide-index="0">
+                    <div class="preview__widget-temperature_text">
+                        <p class="preview__widget-temperature_text_desc">Температура воздуха, °C</p>
+                    </div>
+                    <div class="preview__widget-temperature_values">
+                        <div class="preview__widget-temperature_values_value">
+                        </div>
+                    </div>
+                    <svg id="svg-temperature" viewBox="0 0 440 52" preserveAspectRatio="none" width="100%" height="52px">
+                        <defs>
+                        </defs>
+                        <g transform="translate(0, 30)" id="gPath">
+                        </g>
+                        <g transform="translate(0, 0)" id="gFillPath">
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="preview__preloader">
+                <img src="./assets/images/49db58121197c490352b4ab3d978b6b0.gif" alt="preloader">
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__error">
+            <div class="modal__error_wrapper">
+                <p class="modal__error_status">404</p>
+                <p class="modal__error_text">Oops!</p>
+            </div>
+            <picture>
+                <img src="./assets/images/cat-error.png" alt="cat-error">
+            </picture>
+            <div class="modal__error_back-button">
+                <button>Go Back</button>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/script/main.js"></script>
+</body>
+
+</html>
